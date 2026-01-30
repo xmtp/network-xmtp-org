@@ -2,7 +2,8 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { Skeleton } from '@/components/base';
 import { NodeTable } from './NodeTable';
 import { NodeDetailsDialog } from './NodeDetailsDialog';
-import { NetworkStatusBanner, StatusSummaryCards } from '@/components/ui/status';
+import { NetworkStatusBanner, StatusSummaryCards, TestnetReadOnlyAlert } from '@/components/ui/status';
+import { isTestnet } from '@/config/network';
 import { NodeData } from '@/types/nodes';
 import { useNodeRegistry } from '@/hooks/contracts/useNodeRegistry';
 import { useAllNodeStatuses, useNetworkStatus } from '@/hooks/nodes';
@@ -118,11 +119,15 @@ export const NodesPageContent: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Network Status Banner */}
-      <NetworkStatusBanner
-        statusInfo={networkStatusInfo}
-        onRefresh={refresh}
-        isRefreshing={isChecking}
-      />
+      {isTestnet ? (
+        <TestnetReadOnlyAlert />
+      ) : (
+        <NetworkStatusBanner
+          statusInfo={networkStatusInfo}
+          onRefresh={refresh}
+          isRefreshing={isChecking}
+        />
+      )}
 
       {/* Status Summary Cards */}
       <StatusSummaryCards statusInfo={networkStatusInfo} />
