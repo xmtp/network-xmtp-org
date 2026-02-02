@@ -1,0 +1,10 @@
+{
+  "description": "XMTP Network Node operated by Laminated Labs",
+  "image": "https://laminated-labs-assets.s3.us-east-2.amazonaws.com/public/logo.png",
+  "external_url": "https://laminatedlabs.com/",
+  "operator_name": "Laminated Labs",
+  "region": "Ohio",
+  "social": {
+    "twitter": "@LaminatedLabs"
+  }
+}
