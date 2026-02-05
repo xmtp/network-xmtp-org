@@ -1,0 +1,10 @@
+{
+  "description": "An XMTP Network Node operated by Artifact Systems",
+  "image": "https://frontendmedia.blob.core.windows.net/images/cropped-fav_ico-32x32.jpg",
+  "external_url": "https://artifact-systems.io/",
+  "operator_name": "Artifact Systems",
+  "region": "London",
+  "social": {
+    "twitter": "@artifactstaking"
+  }
+}
