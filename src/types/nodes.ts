@@ -107,6 +107,14 @@ export interface NodeWithStatus extends NodeData {
 }
 
 /**
+ * Vector clock returned by GetSyncCursor, mapping node IDs to sequence IDs
+ */
+export interface NodeVectorClock {
+  /** Map of nodeId (as string) to sequenceId (as string, may be large int64) */
+  nodeIdToSequenceId: Record<string, string>;
+}
+
+/**
  * Filter options for node list
  */
 export type NodeFilterType = 'all' | 'canonical' | 'community';

@@ -10,5 +10,6 @@ export * from './Label';
 export * from './PageContainer';
 export * from './Skeleton';
 export * from './Table';
+export * from './Tabs';
 export * from './Tooltip';
 export * from './variants';
