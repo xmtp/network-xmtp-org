@@ -1,7 +1,7 @@
 {
   "settlementChain": {
     "chainId": 8453,
-    "publicRpcUrl": "https://base.g.alchemy.com/v2/demo",
-    "nodeRegistry": "TBD_MAINNET_NODE_REGISTRY"
+    "publicRpcUrl": "https://base.gateway.tenderly.co",
+    "nodeRegistry": "0xC5742B5F2e19B859eaE03A9c44531C33fA8e75F8"
   }
 }
