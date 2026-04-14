@@ -1,6 +1,9 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { networkLabel } from '@/config/network';
+import { networkLabel, isMainnet } from '@/config/network';
+
+const MAINNET_URL = 'https://network.xmtp.org';
+const TESTNET_URL = 'https://testnet.network.xmtp.org';
 
 export const Layout: React.FC = () => {
   return (
@@ -32,6 +35,12 @@ export const Layout: React.FC = () => {
               </a>
               <a href="https://docs.xmtp.org" target="_blank" rel="noopener noreferrer" className="hover:text-zinc-300 transition-colors">
                 Documentation
+              </a>
+              <a
+                href={isMainnet ? TESTNET_URL : MAINNET_URL}
+                className="hover:text-zinc-300 transition-colors"
+              >
+                Switch to {isMainnet ? 'Testnet' : 'Mainnet'}
               </a>
             </div>
             <div className="text-zinc-600">
